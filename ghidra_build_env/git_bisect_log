@@ -1,0 +1,26 @@
+# bad: [104d9592485c2fb6c7ab5177c71d8d70140a3d03] GP-0 more doc revisions for release
+# good: [4ed65cc0db1a4397ebb8f8d122fe216418ab0afc] GP-0 10.2.3 Change History
+git bisect start 'Ghidra_10.3_build' 'Ghidra_10.2.3_build'
+# skip: [956673ebed0c9695b7b5ff7747dd3d3ac2fd8918] Merge remote-tracking branch 'origin/GP-0_Dan_testFixes-2023-02-14-1'
+git bisect skip 956673ebed0c9695b7b5ff7747dd3d3ac2fd8918
+# good: [537e8e198e9d794a71df5d43fe0f66d1c072ebeb] GP-1768A: limits on initial loads; fix for possible id/pid/tid mismatch
+git bisect good 537e8e198e9d794a71df5d43fe0f66d1c072ebeb
+# good: [23597c71d6cd6c557eab1f35453f1db2d3b7edb2] Merge remote-tracking branch 'origin/GP-2748_James_elf_process_entry--SQUASHED' (Closes #4667)
+git bisect good 23597c71d6cd6c557eab1f35453f1db2d3b7edb2
+# good: [bc52cf8a29bf22cf9808b28a6062a8eaeca9c473] Merge branch 'GP-2487_ghidracadabra_PR-4336_ekilmer_fix-lock-prefix' (Closes #4336)
+git bisect good bc52cf8a29bf22cf9808b28a6062a8eaeca9c473
+# bad: [ebe495d99a56e47bcdad0f84eaf98e5f4106727c] GP-0 Fixed updated archive category path name case to agree with old archive category path names
+git bisect bad ebe495d99a56e47bcdad0f84eaf98e5f4106727c
+# good: [0e86345f1525582c4eeaab05cd3f3568b10e97d5] Merge remote-tracking branch 'origin/GP-2679_ghidra007_rtti_fix_for_static_stripped_gccs' (Closes #4414)
+git bisect good 0e86345f1525582c4eeaab05cd3f3568b10e97d5
+# bad: [1df6c993b9729b816d1629721f81e5297f5e573c] GP-3372: Reverted x86 66 90 bytes back to nop
+git bisect bad 1df6c993b9729b816d1629721f81e5297f5e573c
+# bad: [6984c87da82ddb75d0123cae809a1a6388ffbac4] Merge remote-tracking branch 'origin/GP-2257_ghidorahrex_PR-4258_Heurs_bpf_processor' (Closes #4258)
+git bisect bad 6984c87da82ddb75d0123cae809a1a6388ffbac4
+# good: [aa893f6721557fa88b1318f0146ebddb8faae0c9] Merge remote-tracking branch 'origin/GP-2114_dev747368_Golang--SQUASHED'
+git bisect good aa893f6721557fa88b1318f0146ebddb8faae0c9
+# good: [33a7dfb6d9fc4e95b93870295494f187c6eb2a6c] GP-2257: added build script
+git bisect good 33a7dfb6d9fc4e95b93870295494f187c6eb2a6c
+# bad: [02248d2251ec4da62c1d8fbcda1503c89dd7af9e] GP-3077 Added constant tracking through stack for stack parameters, fixed issues with values getting crossed moving in and out of memory, added prototype param type creation, added setting for restricting parameters to know pointers to handle harvard architectures and pointertypedefs
+git bisect bad 02248d2251ec4da62c1d8fbcda1503c89dd7af9e
+# first bad commit: [02248d2251ec4da62c1d8fbcda1503c89dd7af9e] GP-3077 Added constant tracking through stack for stack parameters, fixed issues with values getting crossed moving in and out of memory, added prototype param type creation, added setting for restricting parameters to know pointers to handle harvard architectures and pointertypedefs

@@ -1,0 +1,2 @@
+#!/bin/sh
+./buildBase.sh && ./buildGhTest.sh
